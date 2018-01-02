@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 外边距指的是围绕在元素边框的空白区域, 设置外边距会在元素外创建额外的"空白"
+        2. 设置margin属性可以有以下两种格式
+            连写格式:
+            margin: 上外边距 右外边距 下外边距 左外边距
+            非连写格式:
+            margin-top: n;
+            margin-right: n;
+            margin-bottom: n;
+            margin-left: n;
+            其中, n的取值可以是像素或相对于父元素宽度/高度的半分比, 甚至允许使用负值
+        2. 在设置了外边距属性后, 整个标签元素占有的高度以及宽度均不会发生变化
+        3. 外边距区域不会继承元素的背景颜色属性
+        4. 在连写格式中, 省略某些方向上的外边距属性设置, 最终的生效规则与边框属性一致
+    -->
+    <title>外边距属性</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .box1 {
+            margin: 10px 20px 30px 40px;
+            background: lightgreen;
+        }
+        .box2 {
+            margin-top: 10px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 40px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box1">坂井泉水（さかい いずみ）</span>
+    <span class="box2">坂井泉水（さかい いずみ）</span>
+</body>
+</html>

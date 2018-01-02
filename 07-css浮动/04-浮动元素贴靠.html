@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在浮动流中, 当子元素的元素宽度超过了父元素的宽度时, 将会发生浮动贴靠现象, 总结如下:
+            * 当父元素宽度足够放下内部所有浮动元素时, 所有浮动元素将会按照排序规则并列的显示
+            * 当父元素宽度不够放下内部所有浮动元素时, 最后一个浮动元素将会尝试贴靠前面的浮动元素
+              使其能够被容纳在父元素的宽度内
+            * 如果贴靠在前面的浮动元素依旧不能被容纳在父元素的宽度内, 该浮动元素将会尝试贴靠更前面的元素
+            * 如果一直没有找到贴靠后能够容纳在父元素宽度内的浮动元素, 该元素将最终贴靠至父元素
+    -->
+    <title>浮动元素贴靠</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #000;
+            background-color: gray;
+        }
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 250px;
+            background-color: red;
+        }
+        .box2 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        .box3 {
+            float: left;
+            width: 250px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

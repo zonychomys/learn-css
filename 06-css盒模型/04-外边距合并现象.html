@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在两个元素的外边距相遇时, 它们将会根据相遇的方向(水平/垂直)产生不同的合并效果:
+            水平方向: 合并后的外边距宽度等于发送合并的两个外边距之和
+            垂直方向: 合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者
+        2. 在垂直方向上, 当一个元素包含在另一个元素中时, 它们的上和/或下外边距也会发生合并
+        3. 在垂直方向上, 外边距甚至可以与自身发生合并, 这种情况发生在元素为空的情况下, 上外边距与下外边距将会发生合并
+        4. 参考: http://www.w3school.com.cn/css/css_margin_collapsing.asp
+    -->
+    <title>外边距合并现象</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        .box1 {
+            margin-right: 20px;
+            background: lightgreen;
+        }
+        .box2 {
+            margin-left: 50px;
+            background: skyblue;
+        }
+        .box3 {
+            margin-bottom: 20px;
+            background: lightgreen;
+        }
+        .box4 {
+            margin-top: 50px;
+            background: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="box1">坂井泉水（さかい いずみ）</span>
+    <span class="box2">坂井泉水（さかい いずみ）</span>
+    <hr />
+    <div class="box3">坂井泉水（さかい いずみ）</div>
+    <div class="box4">坂井泉水（さかい いずみ）</div>
+</body>
+</html>

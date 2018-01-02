@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  class选择器通过class属性定位页面中特定的标签, 并设置属性  -->
+    <title>class选择器</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        /*
+            class名称只能由字母/数字/下划线组成, 且不能以数字作为开头
+            class名称不能使用html内置的标签名称
+        */
+        .izumi {
+            color: skyblue;
+        }
+        .sakai {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="izumi">坂井泉水（さかい いずみ Izumi Sakai），本名蒲池幸子（かまちさちこ），1967年2月6日出生于神奈川县平冢市，日本创作型女歌手，流行乐队ZARD主唱。</p>
+
+
+    <!--  每个标签可以绑定多个class,  同一个class属性能够绑定在多个标签上  -->
+    <p class="izumi sakai">坂井泉水（さかい いずみ Izumi Sakai），本名蒲池幸子（かまちさちこ），1967年2月6日出生于神奈川县平冢市，日本创作型女歌手，流行乐队ZARD主唱。</p>
+</body>
+</html>

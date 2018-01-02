@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文字相关属性</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        p {
+            /*
+                定义字体样式:
+                normal: 标准
+                italic: 斜体
+            */
+            font-style: italic;
+
+
+            /*
+                定义字体粗细:
+                normal: 标准
+                bold: 粗体
+                0-n: 通过数值定义由细到粗的字符, 400=normal,700=bold
+            */
+            font-weight: 700;
+
+
+            /*  定义字体大小, 取值必须使用px作为单位  */
+            font-size: 20px;
+
+
+            /*  选择字体, 如果字体名称是中文则必须使用双引号括起来  */
+            font-family: consolas;
+
+
+            /*  设置备选字体方案  */
+            font-family: no_exist_font, "微软雅黑";
+
+
+            /*  利用中文字体包含英文字体, 而英文字体不包含中文字体这一特性, 为中英文设置不同的字体  */
+            font-family: consolas, "微软雅黑";
+        }
+    </style>
+</head>
+
+<body>
+    <p>段落paragraph</p>
+</body>
+</html>

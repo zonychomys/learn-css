@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        优先级: 当发生层叠冲突时, 元素的最终样式由css定义的优先级决定. 优先级的判断方法:
+
+        1. 直接选中相比间接选中(继承)拥有更高的优先级
+        2. 都是间接选中的情况下, 距离目标标签最近(最内层)的选择器优先级更高
+        3. 都是直接选中的情况下, 将按照选择器的优先级进行比较, 选择器的优先级从高到低排列顺序:
+            id > class > 标签 > 通配符 > 继承 > 浏览器默认行为
+        4. 都是直接选中的情况下, 并且选择器类型也相同的情况下, 前面定义的选择器作用效果将被后面定义的选择器作用效果覆盖
+    -->
+    <title>优先级</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        div {
+            color: skyblue;
+        }
+        p {
+            color: lightgreen;
+        }
+        #id {
+            color: red;
+        }
+        .class {
+            color: yellow;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!--  直接选中相比间接选中(继承)拥有更高的优先级  -->
+    <div>
+        <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+    <hr />
+
+
+    <!--  选中方式相同, 将按照选择器的优先级进行比较  -->
+    <div id="id" class="class">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+</body>
+</html>

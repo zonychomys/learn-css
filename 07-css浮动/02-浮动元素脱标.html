@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 浮动元素脱标指的是当元素转由浮动流控制时, 将会脱离标准流的控制
+        2. 如果前面的一个元素浮动, 而后面一个元素没有浮动, 此时前面一个元素就会盖住后面的元素. 分析过程如下:
+            * 前面的元素脱标, 此时该元素将不受标准流的控制
+            * 在标准流中, 由于前面的元素脱标后消失, 标准流将会重新对现有的可控元素进行重新排版,
+              结果是后面未脱标的元素将顶替前面的元素原先所在的位置
+            * 此时, 原先的元素接受浮动流的控制, 元素将会浮动至脱标前所在行的左边/右边
+            * 最终的现象为前面的元素覆盖住后面顶替上来的元素
+    -->
+    <title>浮动元素脱标</title>
+    <style>
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

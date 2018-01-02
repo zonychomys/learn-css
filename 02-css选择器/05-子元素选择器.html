@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  如果您不希望选择全部的后代元素, 而是希望缩小范围, 只选择某个元素的子元素, 请使用子元素选择器 -->
+    <title>子元素选择器</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        /*  为div中的所有p标签设置样式  */
+        div>p {
+            color: skyblue;
+        }
+
+
+        div>ul>li>p {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+    <hr />
+    <div>
+        <ul>
+            <li>
+                <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

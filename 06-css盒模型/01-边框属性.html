@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 边框是环绕在标签四周的线条, 可以通过多种方法设置边框的属性
+        2. 在通过方式一或方式二设置边框属性时:
+            宽度属性: 可以省略, 省略时默认为3px
+            样式属性: 不能省略, 省略时无法正常显式边框
+            颜色属性: 可以省略, 省略时默认为黑色
+           而对于方式三:
+            当仅省略右边框/左边框样式属性时, 右边框/左边框属性的取值继承左边框/右边框
+            当仅省略上边框/下边框样式属性时, 上边框/下边框属性的取值继承下边框/上边框
+            当同时省略右边框/下边框/左边框样式属性时, 它们都将继承上边框的样式属性
+    -->
+    <title>边框属性</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        /*
+         * 方式一: 连写方式, 同时设置4条边框的样式, 格式为:
+         *  border: 边框宽度 边框样式 边框颜色
+         * Emmet快捷键: bd+
+         *
+        */
+        .box1 {
+            border: 2px dashed skyblue;
+        }
+
+
+        /*
+         * 方式二: 连写方式, 分别设置4条边框的样式(根据边框方位), 格式为:
+         *  border-top: 边框宽度 边框样式 边框颜色
+         *  border-right: 边框宽度 边框样式 边框颜色
+         *  border-bottom: 边框宽度 边框样式 边框颜色
+         *  border-left: 边框宽度 边框样式 边框颜色
+        */
+        .box2 {
+            border-top: 1px solid skyblue;
+            border-right: 2px dashed lightgreen;
+            border-bottom: 1px solid red;
+            border-left: 2px dashed orange;
+        }
+
+
+        /*
+         * 方式三: 连写方式, 分别设置4条边框的样式(根据边框样式), 格式为:
+         *  border-width: 上边框 右边框 下边框 左边框
+         *  border-style: 上边框 右边框 下边框 左边框
+         *  border-color: 上边框 右边框 下边框 左边框
+         *
+        */
+        .box3 {
+            border-width: 1px 2px 3px 4px;
+            border-style: dashed solid dashed solid;
+            border-color: red orange yellow green;
+        }
+
+
+        /*
+         * 方式四: 非连写方式, 每条属性同时指定了边框方位以及边框样式, 格式如下:
+         *  border-top-width:
+         *  border-top-style:
+         *  border-top-color:
+         *  border-right-width:
+         *  border-right-style:
+         *  border-right-color:
+         *  border-bottom-width:
+         *  border-bottom-style:
+         *  border-bottom-color:
+         *  border-left-width:
+         *  border-left-style:
+         *  border-left-color:
+        */
+        .box4 {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: red;
+            border-right-width: 2px;
+            border-right-style: dashed;
+            border-right-color: orange;
+            border-bottom-width: 3px;
+            border-bottom-style: dotted;
+            border-bottom-color: yellow;
+            border-left-width: 4px;
+            border-left-style: double;
+            border-left-color: green;
+        }
+
+
+        /*
+         * 利用边框生成各种图形(此处示例倒三角), 通过这种方式可以减少图片传输带宽消耗
+        */
+        .box5 {
+            width: 0px;
+            height: 0px;
+            border-width: 20px;
+            border-style: solid;
+            border-color: red white yellow white;
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <hr />
+    <div class="box2"></div>
+    <hr />
+    <div class="box3"></div>
+    <hr />
+    <div class="box4"></div>
+    <hr />
+    <div class="box5"></div>
+</body>
+</html>

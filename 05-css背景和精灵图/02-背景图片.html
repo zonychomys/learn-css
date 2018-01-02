@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. background-image属性用于设定标签的背景图片, 取值是包含在url()函数中的图片地址
+        2. background-repeat属性控制背景图片的填充方式, 取值包括:
+            repeat: 默认, 在水平与垂直方向都进行平铺
+            no-repeat: 在水平与垂直方向都不进行平铺
+            repeat-x: 仅在水平方向进行平铺
+            repeat-y: 仅在垂直方向进行平铺
+        3. 如果图片的尺寸小于父标签, 该图片会自动进行平铺填充
+        4. 可以通过背景图片多次平铺的特性来降低图片的大小, 提升网页访问速度
+        5. 背景图片与插入图片主要有以下区别:
+            背景图片仅仅是样式, 因此不会占用实际的网页空间
+            背景图片有定位属性, 因此能够方便的控制图片的具体位置
+            背景图片的语义较插入图片更弱, 因此如果希望图片被搜索引擎收录, 推荐使用图片插入
+    -->
+    <title>背景图片</title>
+    <style>
+        body {
+            width: 200px;
+            height: 200px;
+            background-image: url("http://www.meilapp.com/favicon.ico");
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        在html中, 标签被分为容器级别以及文本级别两类
+        在css中, 标签被分类为块级元素, 行内元素, 行内块级元素三类
+
+        1. 块级元素: 独占一行, 支持设置宽高属性, 默认继承父元素, 常见的块级元素包括:
+            div, p, h, ul, ol, dl, li, dt, dd...
+        2. 行内元素: 不独占一行, 不支持设置宽高属性, 默认与元素内容相同, 常见的行内元素包括:
+            span...
+        3. 行内块级元素: 不独占一行, 但是可以设置宽度和高度, 常见的行内块级元素包括:
+            img...
+    -->
+    <title>css元素显示模式</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+
+        span {
+            width: 200px;
+            height: 200px;
+            background: lightgreen;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <span>坂井泉水（さかい いずみ Izumi Sakai）。</span>
+    <img src="" alt="坂井泉水（さかい いずみ Izumi Sakai）。" />
+</body>
+</html>

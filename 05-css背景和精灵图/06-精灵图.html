@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 精灵图是一种图像合成技术, 可以用来减少图片请求的次数, 降低服务器处理压力
+        2. 精灵图的实现依赖背景图片, 背景图片定位以及设置元素宽高的配合
+        3. 可以通过使用如下展示的嵌套方式实现一次图片请求, 多个元素使用的效果
+    -->
+    <title>精灵图</title>
+    <style>
+        div {
+            background-image: url("http://misc.360buyimg.com/mtd/pc/index/home/images/sprite_fs@1x.png");
+            display: inline-block;
+        }
+
+        .box {
+            width: 30px;
+            height: 30px;
+            background-position: -129px -85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

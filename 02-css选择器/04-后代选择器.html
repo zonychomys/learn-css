@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  后代选择器用于描述嵌套层级关系, 并为整个嵌套的最内层标签设置样式  -->
+    <title>后代选择器</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        /*  为div中的所有p标签设置样式  */
+        div p {
+            color: skyblue;
+        }
+
+
+        /*  选择div中所有class的值为izumi的标签, 并在这些标签内查找所有的li标签, 并设置样式  */
+        div .izumi li {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+
+    <div>
+        <ul class="izumi">
+            <li>坂井泉水（さかい いずみ Izumi Sakai）。</li>
+        </ul>
+    </div>
+</body>
+</html>

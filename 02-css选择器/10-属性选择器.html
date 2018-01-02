@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--  属性选择器可以根据元素的属性及属性值来选择元素  -->
+    <title>属性选择器</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        /*  如果希望选择有某个属性的元素, 而不论属性值是什么, 可以使用简单属性选择器  */
+        *[name] {
+            color: skyblue;
+        }
+
+
+        /*  你也可以通过属性选择器选择特定元素  */
+        p[name] {
+            color: green;
+        }
+
+
+        /*  你也可以通过属性选择器选择那些具有特定属性值的元素  */
+        *[name=ZARD] {
+            color: lightgreen;
+        }
+
+
+        /*  选择那些以特定字符串开头的属性值  */
+        *[name^=Izu] {
+            color: red;
+        }
+
+
+        /*  选择那些以特定字符串结尾的属性值  */
+        *[name$=Kai] {
+            color: orange;
+        }
+
+
+        /*  选择那些包含特定字符串的属性值  */
+        *[name*=mi_sa] {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p name="izumi">坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    <div name="sakai">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <div name="ZARD">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <div name="Izumi">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <div name="SaKai">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <div name="izumi_sakai">坂井泉水（さかい いずみ Izumi Sakai）。</div>
+</body>
+</html>

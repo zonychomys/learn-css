@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在盒子模型中, 如果两个盒子处于嵌套关系, 那么为内部的盒子设置了顶部的外边距, 外层的盒子也会产生相同的顶部外边距
+        2. 此问题的解决办法是为外层的盒子添加一个边框属性
+        3. 因此, 在企业开发中, 当需要对处于嵌套关系的盒子进行边距控制时, 应当优先考虑使用padding
+        4. 从本质上讲, padding用于处理父子盒子之前的关系, 而margin则用于控制兄弟元素之间的间隙
+    -->
+    <title>盒子模型嵌套关系</title>
+    <style>
+        .box1 {
+            border: 1px solid #000;
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .box2 {
+            margin: 100px;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

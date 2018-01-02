@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        权重: 当组合使用多个选择器时, 我们需要求得所有选择器的权重之和以确定元素的最终样式. 计算方法如下:
+
+        1. 不同选择器拥有不同的权重值, 选择器及其对应的权重如下:
+            id(100), class(10), 属性(10), 标签(1), *(0)
+        2. 计算权重时, 只需将各个选择器的权重进行累加求和, 例如:
+            ul#nav li.active a {} = 1(ul) + 100(#nav) + 1(li) + 10(.active) + 1(a) = 113
+    -->
+    <title>权重</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        #id0 .class1 {
+            color: red;
+        }
+        .class0 .class1 {
+            color: orange;
+        }
+        div p {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id0" class="class0">
+        <p id="id1" class="class1">坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+</body>
+</html>

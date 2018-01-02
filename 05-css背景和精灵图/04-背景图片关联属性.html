@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. background-attachment属性用于定义背景图片的关联属性
+        2. 背景图片关联属性指的是图片相对于浏览器滚动条的滚动方式, 取值包括:
+            scroll: 默认, 背景图片会随着浏览器滚动条的滚动而滚动
+            fixed: 背景图片不会随着浏览器滚动条的滚动而滚动
+    -->
+    <title>背景图片关联属性</title>
+    <style>
+        div {
+            height: 2000px;
+            background-image: url("http://misc.360buyimg.com/mtd/pc/index/home/images/sprite_fs@1x.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

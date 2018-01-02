@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. background-position属性用于实现背景图片的定位
+        2. background-position属性的参数顺序为:
+            background-position: 水平方向偏移量 垂直方向偏移量
+        3. background-position属性的取值可以使用具体方位名词以及像素偏移量
+            水平方向取值: left center right
+            垂直方向取值: top center bottom
+        4. 标签可以同时设置背景颜色以及背景图片, 当二者同时存在时图片会覆盖颜色
+    -->
+    <title>背景图片定位属性</title>
+    <style>
+        div {
+            width: 250px;
+            height: 250px;
+            background-color: skyblue;
+            background-image: url("http://misc.360buyimg.com/mtd/pc/index/home/images/sprite_fs@1x.png");
+            background-repeat: no-repeat;
+        }
+        /*  使用具体方位名词设置背景图片定位  */
+        .box1 {
+            background-position: top left;
+        }
+        /*  使用像素偏移量设置背景图片定位  */
+        .box2 {
+            background-position: 20px 60px;
+        }
+        /*  使用负值像素偏移量设置背景图片定位, 结合宽度高度属性还可以实现精灵图效果  */
+        .box3 {
+            background-position: -125px -80px;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <hr />
+    <div class="box2"></div>
+    <hr />
+    <div class="box3"></div>
+</body>
+</html>

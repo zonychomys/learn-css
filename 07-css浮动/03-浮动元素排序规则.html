@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 相同方向上的浮动元素, 先浮动的元素会显示在前面, 后浮动的元素会显示在后面
+        2. 不同方向上的浮动元素, 左浮动会找左浮动, 右浮动会找右浮动
+        3. 浮动元素浮动之后的位置, 由浮动元素浮动之前在标准流中的位置决定
+    -->
+    <title>浮动元素排序规则</title>
+    <style>
+        .box1 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box2 {
+            width: 150px;
+            height: 100px;
+            background-color: orange;
+        }
+        .box3 {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box4 {
+            float: right;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+        浮动元素浮动之后的位置, 由浮动元素浮动之前在标准流中的位置决定, 分析过程如下:
+        1. box1开始浮动, 浮动前位于第一行
+        2. box1脱标, box2, box3, box4整体上移一行, 此时box2处于第一行
+        3. box1完成浮动, 定位在第一行最左端, 并覆盖在box2之上
+        4. box3开始浮动, 浮动前位于第二行
+        5. box3脱标, box4上移一行, 此时box4位于第二行
+        6. box3完成浮动, 定义在第二行的最左端, 并覆盖在box4之上
+        7. box4开始浮动, 浮动前位于第二行
+        8. box4脱标, 并最左浮动至第二行最右端
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+</html>

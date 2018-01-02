@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        在css中, 块级元素, 行内元素, 行内块级元素三者之间可以通过设置元素的display属性实现互相转换. display属性包含如下的取值:
+
+        1. block: 块级
+        2. inline: 行内
+        3. inline-block: 行内块级
+    -->
+    <title>css元素显示模式转换</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        div {
+            display: inline;
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+
+        span {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>坂井泉水（さかい いずみ Izumi Sakai）。</div>
+    <span>坂井泉水（さかい いずみ Izumi Sakai）。</span>
+</body>
+</html>

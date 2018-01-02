@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        层叠性: 多个选择器的作用范围发生了重叠
+        1. 层叠性发生在多个选择器同时作用在同一元素时
+        2. 当重叠发生时, 将会依照优先级来决定元素的最终样式
+    -->
+    <title>层叠性</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        div {
+            color: skyblue;
+        }
+        p {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+</body>
+</html>

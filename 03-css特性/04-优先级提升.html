@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        优先级提升: 对于被选择器直接选中的标签, !important能够实现将指定的标签样式的优先级提升为最高, 注意点如下:
+
+        1. !important只能作用于那些被直接选中的标签, 而不能作用于通过继承选中的标签
+        2. 通配符选择器选中的标签也被当做直接选中的
+        3. !important作用的单位是具体的某个样式属性, 而不是某个标签的所有样式属性
+        4. !important必须写在样式属性值的分号之前
+    -->
+    <title>优先级提升</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        #id {
+            color: skyblue;
+        }
+        .class {
+            color: lightgreen !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  通过使用!important, class选择器设置的样式属性优先级将超越id选择器设置的优先级  -->
+    <div id="id" class="class">
+        <p>坂井泉水（さかい いずみ Izumi Sakai）。</p>
+    </div>
+</body>
+</html>

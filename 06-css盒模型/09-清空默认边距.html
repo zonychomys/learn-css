@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在企业开发中, 为了更好的控制和计算盒子的宽高属性, 我们需要在代码最初删除掉默认的边距样式
+        2. 为了清空默认的边距样式, 可以采取以下的两种方法:
+            方法1: 通配符
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            方法2: 参考http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css
+            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+    -->
+    <title>清空默认边距</title>
+    <style>
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <p>坂井泉水（さかい いずみ）</p>
+    </div>
+</body>
+</html>
+
+

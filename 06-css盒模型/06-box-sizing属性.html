@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在css3中新增的box-sizing属性用于保证在为盒子新增padding或border属性后, 盒子元素的宽高保持不变
+        2. box-sizing属性能够在增加padding或border属性后自动的减去一部分内容的宽度和高度来保持元素的宽高
+        3. box-sizing属性可以使用如下的取值:
+            content-box: 元素的宽高 = 边框*2 + 内边距*2 + 元素内容宽高, 默认为该取值
+            border-box:  元素的宽高 = width
+    -->
+    <title>box-sizing属性</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+        .box2 {
+            box-sizing: border-box;
+            width: 250px;
+            height: 250px;
+            background-color: blue;
+            float: left;
+            border: 20px solid #000;
+        }
+        .box3 {
+            box-sizing: border-box;
+            width: 250px;
+            height: 250px;
+            background-color: green;
+            float: right;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文本相关属性</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        p {
+            /*
+                文本修饰属性:
+                none: 标准
+                underline: 下划线
+                overline: 顶部线条
+                line-through: 贯穿线
+                blink: 闪烁
+            */
+            text-decoration: underline;
+
+
+            /*
+                文本对齐属性:
+                left: 居左
+                right: 居右
+                center: 居中
+            */
+            text-align: center;
+
+            /*
+                文本缩进属性: 文本缩进属性的取值有以下两种格式:
+                nem: em为单位, 一个em代表缩进一个文字的宽度
+                npx: px为单位, 一个px代码缩进一个像素
+            */
+            text-indent: 2em;
+        }
+
+        a {
+            /*  通过设置text-decoration为none可以创建一个不带下划线的a标签  */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>坂井泉水（さかい いずみ Izumi Sakai），本名蒲池幸子（かまちさちこ），1967年2月6日出生于神奈川县平冢市，日本创作型女歌手，流行乐队ZARD主唱。</p>
+    <a href="#">不带下划线的假链接</a>
+</body>
+</html>

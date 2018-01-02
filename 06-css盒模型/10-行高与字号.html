@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        1. 在css中, 所有的行都有自己的行高, 文字在行高当中是默认垂直居中的
+        2. 在企业开发中, 我们经常讲盒子高度与行高设置一致, 这样就可以保证文字在盒子中处于垂直居中(仅适用于只有一行文字的场景)
+        3. 如果一个盒子当中存在多行文字, 要想使文字垂直居中, 我们就不能使用上述的方法, 而是只能利用padding属性
+        4. 顶部的内边距并不是边框到文字顶部的距离, 而是边框到行高顶部的距离
+    -->
+    <title>行高与字号</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            width: 300px;
+            height: 300px;
+            line-height: 50px;
+            border: 1px solid #000;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">坂井泉水（さかい いずみ Izumi Sakai），本名蒲池幸子（かまちさちこ）</div>
+</body>
+</html>

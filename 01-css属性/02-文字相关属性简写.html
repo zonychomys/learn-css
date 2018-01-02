@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文字相关属性简写</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <style>
+        p {
+            /*
+                1. 文字相关属性可以使用简写形式
+                2. 简写格式中font-style与font-weight属性的位置可以互换
+                3. 简写格式中font-size与font-family属性是不可以省略的
+                4. font-size与font-family属性的位置不可以随意放置
+                5. font-size一定要写在font-family之前, 并且这两个属性必须位于其他属性之后
+
+            */
+            font: italic bold 20px consolas;
+        }
+    </style>
+</head>
+
+<body>
+    <p>段落paragraph</p>
+</body>
+</html>
